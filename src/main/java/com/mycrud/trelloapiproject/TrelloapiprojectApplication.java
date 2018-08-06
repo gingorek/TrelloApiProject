@@ -7,16 +7,16 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class TrelloapiprojectApplication extends SpringBootServletInitializer {
+public class TrelloapiprojectApplication  {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TrelloapiprojectApplication.class, args);
 
 	}
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder application){
-		return application.sources(TrelloapiprojectApplication.class);
-
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder application){
+//		return application.sources(TrelloapiprojectApplication.class);
+//
+//	}
 }
