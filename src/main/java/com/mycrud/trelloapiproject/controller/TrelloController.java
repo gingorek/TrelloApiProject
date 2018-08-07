@@ -21,7 +21,14 @@ public class TrelloController {
 
         List<TrelloBoardDto> trelloBoards = trelloClient.getTrelloBoards();
 
-        trelloBoards.forEach(trelloBoardDto -> System.out.println(trelloBoardDto.getId() + " " + trelloBoardDto.getName()));
-    }
+        trelloBoards.forEach(trelloBoardDto -> {
+            System.out.println(trelloBoardDto.getName() + " - " + trelloBoardDto.getId());
 
+            System.out.println("This board contain lists: ");
+
+            trelloBoardDto.getLists().forEach(trelloListDto ->
+                    System.out.println(trelloListDto.getName() + " - " + trelloListDto.getId()
+                            + " - " + trelloListDto.isClosed()));
+        });
+    }
 }
